@@ -1,6 +1,6 @@
 database = {
  'AI and Machine Learning Training': {'phrases': [{'danger': 'high',
-                                                   'keywords': ['train our ai models'],
+                                                   'keywords': ['train our ai models', "algorithms", "machine learning", "automated processing"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -23,7 +23,7 @@ database = {
                                                              'services.',
                                                    'source': 'Zoom'},
                                                   {'danger': 'high',
-                                                   'keywords': ['machine learning models, automated decision-making'],
+                                                   'keywords': ['machine learning models, automated decision-making', "train", "large language models"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -42,7 +42,7 @@ database = {
                                                              'services.',
                                                    'source': 'Meta'},
                                                   {'danger': 'high',
-                                                   'keywords': ['train our ai models, used to train artificial intelligence'],
+                                                   'keywords': ['train our ai models, used to train artificial intelligence', "ingest","generative ai"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -75,7 +75,7 @@ database = {
                                                              'recommendations.',
                                                    'source': 'Paytm'},
                                                   {'danger': 'high',
-                                                   'keywords': ['used for model training, machine learning models'],
+                                                   'keywords': ['used for model training, machine learning models', "model", "scraping"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -103,7 +103,7 @@ database = {
                                                              'and factuality.',
                                                    'source': 'Google'},
                                                   {'danger': 'high',
-                                                   'keywords': ['train ai, machine learning models'],
+                                                   'keywords': ['train ai, machine learning models',"ai models"," machine learning"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -116,7 +116,15 @@ database = {
                                                              'train AI and '
                                                              'machine learning '
                                                              'models',
-                                                   'source': 'Midjourney'}]},
+                                                   'source': 'Midjourney'},
+                                                   {
+                                                    "phrase": "Pinterest also has features that are supported by generative artificial intelligence technology.",
+                                                    "keywords": ["generative artificial intelligence", "generative ai", "ai technology", "supported by ai", "ai features"],
+                                                    "source": "Pinterest",
+                                                    "danger": "medium",
+                                                    "meaning": "Some product features are powered by generative AI technology."
+                                                    },
+                                                   ]},
  'Account Suspension & Termination': {'phrases': [{'danger': 'high',
                                                    'keywords': ['suspend or terminate your account, termination at discretion, terminate any account for any reason at any time.'],
                                                    'meaning': 'The service can '
@@ -133,7 +141,7 @@ database = {
                                                              'of its staff',
                                                    'source': 'Fandom'},
                                                   {'danger': 'high',
-                                                   'keywords': ['restrict your access, suspend or terminate your account, for any reason or no reason'],
+                                                   'keywords': ['restrict your access, suspend or terminate your account, for any reason or no reason', "cancel","revoke"],
                                                    'meaning': 'Your account '
                                                               'can be deleted '
                                                               'or permanently '
@@ -155,7 +163,7 @@ database = {
                                                              'liability.',
                                                    'source': 'Reddit'},
                                                   {'danger': 'high',
-                                                   'keywords': ['disable your, at any time'],
+                                                   'keywords': ['disable your, at any time', 'cancel your account',"without cause", "right to block"],
                                                    'meaning': 'Your account '
                                                               'can be deleted '
                                                               'or permanently '
@@ -171,7 +179,7 @@ database = {
                                                              'time',
                                                    'source': 'Stack Overflow'},
                                                   {'danger': 'high',
-                                                   'keywords': ['terminate your account, any or no reason'],
+                                                   'keywords': ['terminate your account, any or no reason', "immediate effect","in our sole discretion"],
                                                    'meaning': 'Your account '
                                                               'can be deleted '
                                                               'or permanently '
@@ -186,7 +194,7 @@ database = {
                                                              'reason.',
                                                    'source': 'Imgur '},
                                                   {'danger': 'high',
-                                                   'keywords': ['for any reason, terminate your account'],
+                                                   'keywords': ['for any reason, terminate your account',"discontinue your account", "suspend"],
                                                    'meaning': 'The service can '
                                                               'delete specific '
                                                               'content without '
@@ -202,7 +210,7 @@ database = {
                                                              'reason.',
                                                    'source': 'Namecheap'},
                                                   {'danger': 'high',
-                                                   'keywords': ['remove, disable access, restrict your access'],
+                                                   'keywords': ['remove, disable access, restrict your access', "ban","restrict your access","cancel your account"],
                                                    'meaning': 'The service can '
                                                               'delete specific '
                                                               'content without '
@@ -221,7 +229,7 @@ database = {
                                                              'or no reason.',
                                                    'source': 'Airbnb'},
                                                   {'danger': 'high',
-                                                   'keywords': ['at any time without notice, any part of your account'],
+                                                   'keywords': ['at any time without notice, any part of your account', "revoke"],
                                                    'meaning': 'The service can '
                                                               'delete specific '
                                                               'content without '
@@ -237,7 +245,7 @@ database = {
                                                              'any time.',
                                                    'source': 'Roblox'}]},
  'Broad Content Licence': {'phrases': [{'danger': 'medium',
-                                        'keywords': ['royalty-free, license, perpetual license to use, use your user content, irrevocable worldwide license'],
+                                        'keywords': ['royalty-free, license, perpetual license to use, use your user content, irrevocable worldwide license', "unrestricted"],
                                         'meaning': 'Your content can be '
                                                    'licensed to third parties',
                                         'phrase': 'You hereby grant us '
@@ -265,7 +273,7 @@ database = {
                                                   'hereafter devised.',
                                         'source': 'Squarespace'},
                                         {'danger': 'high',
-                                                'keywords': ['perpetual license, irrevocable license, royalty-free, sublicensable, worldwide license'],
+                                                'keywords': ['perpetual license, irrevocable license, royalty-free, sublicensable, worldwide license', "use your user content, grant us a license"],
                                                 'meaning': 'This service keeps '
                                                            'a license on '
                                                            'user-generated '
@@ -283,7 +291,7 @@ database = {
                                                           'license',
                                                 'source': 'Reddit'},
                                         {'danger': 'medium',
-                                                'keywords': ['irrevocable license, use your user content, perpetual license to use'],
+                                                'keywords': ['irrevocable license, use your user content, perpetual license to use', "derivative works","distribute and adapt"],
                                                 'meaning': 'This service keeps '
                                                            'a license on '
                                                            'user-generated '
@@ -303,7 +311,7 @@ database = {
                                                           'Service',
                                                 'source': 'Tumblr'},
                                                 {'danger': 'high',
-                                                'keywords': ['perpetual license, irrevocable license, royalty-free, sublicensable, grant us an'],
+                                                'keywords': ['perpetual license, irrevocable license, royalty-free, sublicensable, grant us an', "display publicly", "user submissions"],
                                                 'meaning': 'This service keeps '
                                                            'a license on '
                                                            'user-generated '
@@ -324,7 +332,7 @@ database = {
                                                 'source': 'Myntra'},
                                         ]},
  'Cross-Platform Tracking': {'phrases': [{'danger': 'medium',
-                                          'keywords': ['cross-device tracking, common across our apps, track your activity across'],
+                                          'keywords': ['cross-device tracking, common across our apps, track your activity across', "cookies"],
                                           'meaning': 'You are tracked via web '
                                                      'beacons, tracking '
                                                      'pixels, browser '
@@ -356,7 +364,7 @@ database = {
                                                     'the Services',
                                           'source': 'Squarespace'},
                                          {'danger': 'medium',
-                                          'keywords': ['remarketing, retargeting, targeted ads'],
+                                          'keywords': ['remarketing, retargeting, targeted ads', "SDKs", "targeted advertising"],
                                           'meaning': 'This service tracks you '
                                                      'on other websites',
                                           'phrase': 'For example, in our '
@@ -371,7 +379,7 @@ database = {
                                           'keywords': ['cross',
                                                        'common',
                                                        'apps',
-                                                       ''],
+                                                        "cross-context behavioral advertising","device identification", "linked accounts", "across our apps", "fingerprinting"],
                                           'meaning': 'This service tracks you '
                                                      'on other websites',
                                           'phrase': 'Your associated profile '
@@ -384,7 +392,7 @@ database = {
                                                     'apps',
                                           'source': 'PhonePe'}]},
  'Data Processing / Privacy': {'phrases': [{'danger': 'high',
-                                            'keywords': ['legitimate interest, legal basis for processing'],
+                                            'keywords': ['legitimate interest, legal basis for processing', "collect","personally identifiable information", "PII", "compliance purposes"],
                                             'meaning': 'The service can read '
                                                        'your private messages',
                                             'phrase': 'Information sent either '
@@ -398,7 +406,7 @@ database = {
                                                       'information',
                                             'source': 'LinkdenIn'},
                                            {'danger': 'high',
-                                            'keywords': ['analyse content, analyze content'],
+                                            'keywords': ['analyse content, analyze content', "data controller", "data processor", "profiling"],
                                             'meaning': 'The service can read '
                                                        'your private messages',
                                             'phrase': 'Our systems '
@@ -412,7 +420,7 @@ database = {
                                                       'below.',
                                             'source': 'Meta'}]},
  'Data Retention Without Limits': {'phrases': [{'danger': 'high',
-                                                'keywords': ['retain this information'],
+                                                'keywords': ['retain this information', "keep this information", "survive account deletion"],
                                                 'meaning': 'This service holds '
                                                            'onto content that '
                                                            "you've deleted",
@@ -426,7 +434,7 @@ database = {
                                                           'information.',
                                                 'source': 'LinkdenIn'},
                                                {'danger': 'high',
-                                                'keywords': ['retain your data, data retention'],
+                                                'keywords': ["retain your data", "data retention" ,"archival purposes", "indefinitely"],
                                                 'meaning': 'This service holds '
                                                            'onto content that '
                                                            "you've deleted",
@@ -444,7 +452,7 @@ database = {
                                                           'account.',
                                                 'source': 'Fandom'},
                                                {'danger': 'medium',
-                                                'keywords': ['retain your data, as long as necessary'],
+                                                'keywords': ['retain your data, as long as necessary', "preserve", "archival purposes","in perpetuity"],
                                                 'meaning': 'This service may '
                                                            'keep personal data '
                                                            'after a request '
@@ -472,7 +480,7 @@ database = {
                                                           'applicable laws.',
                                                 'source': 'Whatsapp'},
                                                {'danger': 'medium',
-                                                'keywords': ['retain your data, retain certain information'],
+                                                'keywords': ['retain your data, retain certain information', "for legitimate business purposes","survive account deletion"],
                                                 'meaning': 'This service may '
                                                            'keep personal data '
                                                            'after a request '
@@ -492,7 +500,7 @@ database = {
                                                           'deletion.',
                                                 'source': 'Zoom'},
                                                {'danger': 'medium',
-                                                'keywords': ['retain your data, keep some data, as long as necessary'],
+                                                'keywords': ['retain your data, keep some data, as long as necessary', "without temporal limit", "indefinitely", "permanently recorded"],
                                                 'meaning': 'This service may '
                                                            'keep personal data '
                                                            'after a request '
@@ -513,7 +521,7 @@ database = {
                                                           'require this.',
                                                 'source': 'Discord'},
                                                {'danger': 'medium',
-                                                'keywords': ['retain your data, no longer than necessary'],
+                                                'keywords': ['retain your data, no longer than necessary', "log personal", "preserve data"],
                                                 'meaning': 'The service may '
                                                            'anonymize your '
                                                            'personal data '
@@ -529,7 +537,7 @@ database = {
                                                           'research purposes.',
                                                 'source': 'Flipkart'},
                                                {'danger': 'high',
-                                                'keywords': ['retain your data, as long as necessary'],
+                                                'keywords': ['retain your data, as long as necessary', "store forever","retain"],
                                                 'meaning': 'Your data may be '
                                                            'retained '
                                                            'indefinitely for '
@@ -550,7 +558,7 @@ database = {
                                                           'required by law',
                                                 'source': 'Flipkart'},
                                                {'danger': 'high',
-                                                'keywords': ['retain your data, no longer than necessary'],
+                                                'keywords': ['retain your data, no longer than necessary', "maintain","preserve"],
                                                 'meaning': 'Your data is '
                                                            'retained for a '
                                                            'range of internal '
@@ -571,7 +579,7 @@ database = {
                                                           'permitted by law.',
                                                 'source': 'Flipkart'}]},
  'Data Sharing With Third Parties': {'phrases': [{'danger': 'high',
-                                                  'keywords': ['disclose to third parties, use third parties'],
+                                                  'keywords': ['disclose to third parties, use third parties', "affiliates", "provide access to"],
                                                   'meaning': 'Sensitive data '
                                                              'is collected and '
                                                              'shared to target '
@@ -607,7 +615,7 @@ database = {
                                                             'advertising.',
                                                   'source': 'Squarespace'},
                                                  {'danger': 'high',
-                                                  'keywords': ['disclose to third parties, ransfer your information to'],
+                                                  'keywords': ['disclose to third parties, transfer your information to',  "made available to", "subsidiaries","merchants"],
                                                   'meaning': 'Your personal '
                                                              'data may be sold '
                                                              'or otherwise '
@@ -657,7 +665,7 @@ database = {
                                                             'device settings.',
                                                   'source': 'Yelp'},
                                                  {'danger': 'high',
-                                                  'keywords': ['location tracking, geolocation'],
+                                                  'keywords': ['location tracking, geolocation', "data brokers", "commercial partners", "provide access to"],
                                                   'meaning': 'Location data '
                                                              'may be '
                                                              'collected, used '
@@ -700,7 +708,7 @@ database = {
                                                             'products',
                                                   'source': 'Gitlab'},
                                                  {'danger': 'high',
-                                                  'keywords': ['process your personal data'],
+                                                  'keywords': ['process your personal data', "advertisers", "brokers"],
                                                   'meaning': 'Third-party '
                                                              'cookies are used '
                                                              'for statistics',
@@ -736,7 +744,7 @@ database = {
                                                             'Service.',
                                                   'source': 'Yelp'},
                                                  {'danger': 'high',
-                                                  'keywords': ['share your information with, sell your personal data, with our business partners'],
+                                                  'keywords': ['share your information with, sell your personal data, with our business partners', "service providers", "affiliate networks"],
                                                   'meaning': 'If the service '
                                                              'gets acquired or '
                                                              'is involved in a '
@@ -789,7 +797,7 @@ database = {
                                                             'device settings.',
                                                   'source': 'Yelp'},
                                                  {'danger': 'medium',
-                                                  'keywords': ['third parties or their policies'],
+                                                  'keywords': ['third parties or their policies', "monetize","lease","disclose to third parties"],
                                                   'meaning': 'No liability is '
                                                              'accepted for how '
                                                              'third parties '
@@ -805,9 +813,17 @@ database = {
                                                             'these third '
                                                             'parties or their '
                                                             'policies.',
-                                                  'source': 'PhonePe'}]},
+                                                  'source': 'PhonePe'},
+                                                  {
+                                                    "phrase": "If we were to engage in a merger, acquisition, bankruptcy, dissolution, reorganisation or similar transaction or proceeding that involves the transfer of the information described in this Privacy Policy, we would share your information with a party involved in such a process.",
+                                                    "keywords": ["merger, acquisition", "bankruptcy, dissolution", "reorganisation", "transfer of the information", "potential purchaser"],
+                                                    "source": "Pinterest",
+                                                    "danger": "medium",
+                                                    "meaning": "Your data may be transferred to a new owner if the company is acquired, merges, or dissolves."
+                                                }
+                                                  ]},                                            
  'Government and Law Enforcement Sharing': {'phrases': [{'danger': 'high',
-                                                         'keywords': ['to respond or comply with, government or regulatory authorities'],
+                                                         'keywords': ['to respond or comply with, government or regulatory authorities', "subpoena", "warrant", "government agency", "required by law",  "legal obligation", "judicial order", "legal process","injunction"],
                                                          'meaning': 'They can '
                                                                     'hand your '
                                                                     'data to '
@@ -846,7 +862,7 @@ database = {
                                                                    'discretion)',
                                                          'source': 'GitLab'},
                                                         {'danger': 'high',
-                                                         'keywords': ['as required by law, respond to legal process'],
+                                                         'keywords': ['as required by law, respond to legal process', "summons","mandate","law enforcement", "national security request", "regulatory authority", "police disclosure", "public authority"],
                                                          'meaning': 'They can '
                                                                     'hand your '
                                                                     'data to '
@@ -895,9 +911,17 @@ database = {
                                                                    'for other '
                                                                    'legitimate '
                                                                    'purposes.',
-                                                         'source': 'PhonePe'}]},
+                                                         'source': 'PhonePe'},
+                                                                    {
+                                                        "phrase": "With law enforcement agencies, government agencies, researchers or other parties in compliance with laws, rules or regulations.",
+                                                        "keywords": ["law enforcement agenc", "government agenc", "comply with laws", "requests for account information", "reasonably necessary"],
+                                                        "source": "Pinterest",
+                                                        "danger": "high",
+                                                        "meaning": "Personal data may be shared with law enforcement or government agencies to comply with legal requests."
+                                                        },
+                                                         ]},
  'Implied Consent via Usage': {'phrases': [{'danger': 'medium',
-                                            'keywords': ['by using the, constitutes your consent, you consent to'],
+                                            'keywords': ['by using the, constitutes your consent, you consent to', "by using", "by accessing", "continued use", "constitutes acceptance", "remains conditional upon", "by remaining a user","acknowledge"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -936,7 +960,7 @@ database = {
                                                       'Policy',
                                             'source': 'PhonePe'},
                                            {'danger': 'medium',
-                                            'keywords': ['by using the, you consent to'],
+                                            'keywords': ["submit to",'by using the, you consent to', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -958,7 +982,7 @@ database = {
                                                       'privacy policy.',
                                             'source': 'Flipkart Stories'}]},
  'Intellectual Property & Content Rights': {'phrases': [{'danger': 'high',
-                                                         'keywords': ['waive your moral rights, waive claims '],
+                                                         'keywords': ['waive your moral rights, waive claims',"intellectual property", "moral rights", "you retain"],
                                                          'meaning': 'You waive '
                                                                     'your '
                                                                     'moral '
@@ -985,7 +1009,7 @@ database = {
                                                                    'Content',
                                                          'source': '500px'},
                                                         {'danger': 'high',
-                                                         'keywords': ['waive your moral rights, not enforce'],
+                                                         'keywords': ['waive your moral rights, not enforce',"all rights reserved", "exclusive property of", "brand assets","proprietary code"],
                                                          'meaning': 'You waive '
                                                                     'your '
                                                                     'moral '
@@ -1014,7 +1038,7 @@ database = {
                                                                    'Content,',
                                                          'source': 'Behance'},
                                                         {'danger': 'high',
-                                                         'keywords': ['waive your moral rights, not assert, proprietary rights in'],
+                                                         'keywords': ['waive your moral rights, not assert, proprietary rights in', "title and interest", "remains our property", "sole owner", "vested in us", "infringement","trade secret"],
                                                          'meaning': 'You waive '
                                                                     'your '
                                                                     'moral '
@@ -1049,7 +1073,7 @@ database = {
                                                                    'users.',
                                                          'source': 'Fandom'}]},
  'Mandatory Arbitration': {'phrases': [{'danger': 'high',
-                                        'keywords': ['neutral arbitrator'],
+                                        'keywords': ['neutral arbitrator', "class action", "class action waiver", "dispute resolution", "governing law", "settlement", "tribunal", "jurisdiction","arbitration", "binding"],
                                         'meaning': 'This service forces users '
                                                    'into binding arbitration '
                                                    'in the case of disputes',
@@ -1068,7 +1092,7 @@ database = {
                                                   'arbitrator’s award.',
                                         'source': 'Ticketmaster'},
                                        {'danger': 'high',
-                                        'keywords': ['binding arbitration'],
+                                        'keywords': ['binding arbitration', "individual basis only", "relinquish right to trial", "binding arbitration", "jury trial waiver", "no class relief", "adjudication", "mediator", "arbitrator"],
                                         'meaning': 'This service forces users '
                                                    'into binding arbitration '
                                                    'in the case of disputes',
@@ -1077,7 +1101,7 @@ database = {
                                                   'class) arbitration.',
                                         'source': 'Reddit'}]},
  'Unilateral Changes': {'phrases': [{'danger': 'high',
-                                     'keywords': ['revise these terms, change or amend, these terms, without notice'],
+                                     "keywords": ["change or amend these terms", "revise these terms", "amend these terms", "modify these terms", "without prior notice to you"],
                                      'meaning': 'Terms may be changed any time '
                                                 'at their discretion, without '
                                                 'notice to you',
@@ -1086,7 +1110,7 @@ database = {
                                                'time without notice.',
                                      'source': 'Minecraft'},
                                     {'danger': 'high',
-                                     'keywords': ['revise these terms, without prior notice, change this'],
+                                     "keywords": ["change this privacy policy", "revise this privacy policy", "modify this policy", "without prior notice to you", "at our sole discretion"],
                                      'meaning': 'Terms may be changed any time '
                                                 'at their discretion, without '
                                                 'notice to you',
@@ -1095,7 +1119,7 @@ database = {
                                                'time without notice to you.',
                                      'source': 'Imgur'},
                                     {'danger': 'high',
-                                     'keywords': ['sole discretion, modify, revise these terms, remove portions, privacy policy'],
+                                     "keywords": ["modify this privacy policy", "remove portions of this policy", "change this privacy policy", "without prior written notice", "at our sole discretion"],
                                      'meaning': 'Terms may be changed any time '
                                                 'at their discretion, without '
                                                 'notice to you',
@@ -1107,7 +1131,7 @@ database = {
                                                'prior written notice to you.',
                                      'source': 'PhonePe'}]},
  'User Identity & Anonymity': {'phrases': [{'danger': 'high',
-                                            'keywords': ['provide true, accurate data, pseudonyms are not allowed'],
+                                            'keywords': ['provide true, accurate data, pseudonyms are not allowed', "cannot identify you", "non-personally identifiable", "de-identified data", "statistical data", "population-level insights", "personally non-identifiable", "in bulk format", "anonymous", "pseudonymized, aggregate", "anonymised", "de-identified", "unlinked", "masked", "obfuscated", "sanitized", "demographic data"],
                                             'meaning': 'You must provide your '
                                                        'legal name, pseudonyms '
                                                        'are not allowed',

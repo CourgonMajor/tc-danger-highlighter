@@ -3,11 +3,24 @@ import re
 import patterns
 import pprint
 
+debug = False
+# pprint.pprint(patterns.database) this will print the entire database in a pretty format
 
-print(os.getcwd())
-with open("data/sample_policies/crunchyroll.txt", "rt") as f:
+# Inputing the filename, only used in testing
+print("Enter the filename")
+filename = input().strip()
+
+
+with open(f"data/sample_policies/{filename}", "rt") as f:
     file = f.read()
 found = False
+
+#This code adjusts the threshold for a match depending on the number of keywords in the pattern
+def get_threshold(num_keywords):
+    if num_keywords <= 5:
+        return num_keywords / 2
+    else:
+        return num_keywords / 4
 
 #Old matching code, kept for reference
 # for category, data in patterns.database.items():
@@ -27,7 +40,7 @@ found = False
 
 
 splited = re.split(r'(?<=[.!?])\s+', file)
-
+#Splitting into windows
 window = ""
 windows = []
 
@@ -38,6 +51,7 @@ for i in range(0,len(splited) - 1):
     window = splited[i] + " " + splited[i+1]
     windows.append(window)
 tracker = set()
+#Matching algorithm
 for window in windows:
     for category, data in patterns.database.items():
         for pattern in data['phrases']:
@@ -45,10 +59,12 @@ for window in windows:
             for keyword in pattern['keywords']:
                 if keyword.lower() in window.lower():
                     matches += 1
-            if matches > len(pattern['keywords']) / 2:
+            threshold = get_threshold(len(pattern['keywords']))
+            if matches > threshold:
                 if pattern['phrase'] not in tracker:
-                    print(f"matches: {matches}, in {category} - {pattern['phrase']}")
-                    print(f"  Found in policy: {window}")
+                    if debug: 
+                        print(f"matches: {matches}, in {category} - {pattern['phrase']}")
+                        print(f"  Found in policy: {window}")
                     tracker.add(pattern['phrase'])
                     values = {
                         "category": category,
@@ -58,8 +74,14 @@ for window in windows:
                     }
                     count += 1
                     findings.append(values)
-print(f"windows: {len(windows)}")
+            # if matches > 0: debug code to see how many keywords matched for each pattern
+            #     print(f"  [debug] {matches}/{len(pattern['keywords'])} in {category} - {pattern['phrase'][:50]}")
 
+#Final report
+for clause in findings:
+    print(f"[{clause['danger'].upper()}] {clause['source']}- {clause['category']} ")
+    print(f"The meaning: {clause['meaning']}")
+#Score calculation
 score = 0
 for i in findings:
     if i['danger'] == "high":
@@ -70,4 +92,8 @@ for i in findings:
         score += 1
 score = min(score, 10)
 print(f"Total findings: {count}, Score: {score}/10")
-# pprint.pprint(patterns.database) this will print the entire database in a pretty format
+if debug:
+    print(os.getcwd())
+    print(f"windows: {len(windows)}")
+    if matches > 0:
+        print(f"  [debug] {matches}/{len(pattern['keywords'])} in {category} - {pattern['phrase'][:50]}")
