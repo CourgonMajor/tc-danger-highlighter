@@ -5,7 +5,7 @@ import os
 import re
 import patterns
 # import pprint
-debug = False
+debug = True
 #This list contains pairs of American and British English variants for certain keywords. 
 VARIANT_PAIRS = [
     ("analyz", "analys"),
@@ -127,7 +127,7 @@ for window in windows:
 #The following loop iterates through the findings and prints out the details of each finding, including the danger level, source, category, and meaning. 
 # The danger level is displayed in uppercase for emphasis.
 for clause in findings:
-    print(f"[{clause['danger'].upper()}] {clause['source']}- {clause['category']} ")
+    print(f"[{clause['danger'].upper()}] {clause['source']} - {clause['category']} ")
     print(f"The meaning: {clause['meaning']}")
 #The scoring system assigns points based on the danger level of each finding. 
 #The total score is capped at a maximum of 10 points as a way to quantify the overall risk level of the privacy policy.

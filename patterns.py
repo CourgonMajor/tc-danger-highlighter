@@ -75,7 +75,7 @@ database = {
                                                              'recommendations.',
                                                    'source': 'Paytm'},
                                                   {'danger': 'high',
-                                                   'keywords': ['used for model training', 'machine learning models', "model", "scraping"],
+                                                   'keywords': ['used for model training', 'machine learning models',  "scraping"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -103,7 +103,7 @@ database = {
                                                              'and factuality.',
                                                    'source': 'Google'},
                                                   {'danger': 'high',
-                                                   'keywords': ['train ai', 'machine learning models',"ai models"," machine learning"],
+                                                   'keywords': ['train ai', 'machine learning models',"ai models"],
                                                    'meaning': 'Your personal '
                                                               'data is used '
                                                               'for automated '
@@ -125,7 +125,7 @@ database = {
                                                     "meaning": "Some product features are powered by generative AI technology."
                                                     },
                                                    ]},
- 'Account Suspension & Termination': {'phrases': [{'danger': 'high',
+ 'Account Suspension and Termination': {'phrases': [{'danger': 'high',
                                                    'keywords': ['suspend or terminate your account', 'termination at discretion', 'terminate any account for any reason at any time.'],
                                                    'meaning': 'The service can '
                                                               'delete your '
@@ -245,7 +245,7 @@ database = {
                                                              'any time.',
                                                    'source': 'Roblox'}]},
  'Broad Content Licence': {'phrases': [{'danger': 'medium',
-                                        'keywords': ['royalty-free', 'license', 'perpetual license to use', 'use your user content', 'irrevocable worldwide license', "unrestricted"],
+                                        'keywords': ['royalty-free', 'perpetual license to use', 'use your user content', 'irrevocable worldwide license', "unrestricted"],
                                         'meaning': 'Your content can be '
                                                    'licensed to third parties',
                                         'phrase': 'You hereby grant us '
@@ -534,7 +534,7 @@ database = {
                                                           'research purposes.',
                                                 'source': 'Flipkart'},
                                                {'danger': 'high',
-                                                'keywords': ['retain your data', 'as long as necessary', "store forever","retain"],
+                                                'keywords': ['retain your data', 'as long as necessary', "store forever"],
                                                 'meaning': 'Your data may be '
                                                            'retained '
                                                            'indefinitely for '
@@ -918,7 +918,7 @@ database = {
                                                         },
                                                          ]},
  'Implied Consent via Usage': {'phrases': [{'danger': 'medium',
-                                            'keywords': ['by using the service', 'constitutes your consent', 'you consent to', "by using", "by accessing", "continued use", "constitutes acceptance", "remains conditional upon", "by remaining a user","acknowledge"],
+                                            'keywords': ['by using the service', 'constitutes your consent',  "by accessing", "continued use", "constitutes acceptance", "remains conditional upon", "by remaining a user"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -938,7 +938,7 @@ database = {
                                                       'modifications.',
                                             'source': 'Ticketmaster'},
                                            {'danger': 'medium',
-                                            'keywords': ['by using the', 'you consent to'],
+                                            'keywords': ['by using the'],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -957,7 +957,7 @@ database = {
                                                       'Policy',
                                             'source': 'PhonePe'},
                                            {'danger': 'medium',
-                                            'keywords': ["submit to",'by using the', 'you consent to', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
+                                            'keywords': ["submit to",'by using the', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -978,8 +978,8 @@ database = {
                                                       'information as per this '
                                                       'privacy policy.',
                                             'source': 'Flipkart Stories'}]},
- 'Intellectual Property & Content Rights': {'phrases': [{'danger': 'high',
-                                                         'keywords': ['waive your moral rights', 'waive claims',"intellectual property", "moral rights", "you retain"],
+ 'Intellectual Property and Content Rights': {'phrases': [{'danger': 'high',
+                                                         'keywords': ['waive your moral rights', 'waive claims',"intellectual property", "you retain"],
                                                          'meaning': 'You waive '
                                                                     'your '
                                                                     'moral '
@@ -1070,7 +1070,7 @@ database = {
                                                                    'users.',
                                                          'source': 'Fandom'}]},
  'Mandatory Arbitration': {'phrases': [{'danger': 'high',
-                                        'keywords': ['neutral arbitrator', "class action", "class action waiver", "dispute resolution", "governing law", "settlement", "tribunal", "jurisdiction","arbitration", "binding"],
+                                        'keywords': ['neutral arbitrator', "class action waiver", "dispute resolution", "governing law", "settlement", "tribunal", "jurisdiction","arbitration", "binding"],
                                         'meaning': 'This service forces users '
                                                    'into binding arbitration '
                                                    'in the case of disputes',
@@ -1098,7 +1098,7 @@ database = {
                                                   'class) arbitration.',
                                         'source': 'Reddit'}]},
  'Unilateral Changes': {'phrases': [{'danger': 'high',
-                                     "keywords": ["change or amend these terms", "revise these terms", "amend these terms", "modify these terms", "without prior notice to you"],
+                                     "keywords": ["revise these terms", "amend these terms", "modify these terms", "without prior notice to you"],
                                      'meaning': 'Terms may be changed any time '
                                                 'at their discretion, without '
                                                 'notice to you',
@@ -1127,7 +1127,7 @@ database = {
                                                'Policy at any time without any '
                                                'prior written notice to you.',
                                      'source': 'PhonePe'}]},
- 'User Identity & Anonymity': {'phrases': [{'danger': 'high',
+ 'User Identity and Anonymity': {'phrases': [{'danger': 'high',
                                             'keywords': ['provide true', 'accurate data', 'pseudonyms are not allowed', "cannot identify you", "non-personally identifiable",  "personally non-identifiable"],
                                             'meaning': 'You must provide your '
                                                        'legal name, pseudonyms '
