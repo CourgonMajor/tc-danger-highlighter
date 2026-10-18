@@ -2,10 +2,11 @@
 # It reads a policy text file, splits it into windows of sentences, and checks for matches against the patterns defined in the `patterns` module. 
 # The findings are then reported along with a score indicating the level of risk.
 import os
+import math
 import re
 import patterns
 # import pprint
-debug = True
+debug = False
 #This list contains pairs of American and British English variants for certain keywords. 
 VARIANT_PAIRS = [
     ("analyz", "analys"),
@@ -47,7 +48,7 @@ VARIANT_PAIRS = [
     ("acknowledgement", "acknowledgment"),
     ("enquir", "inquir"),
 ]
-
+rank = {"high": 3, "medium": 2, "low": 1}
 #This function generates all possible forms of a given keyword by replacing American English variants with their British English counterparts and vice versa. 
 def get_keyword_forms(keyword):
     forms = {keyword}
@@ -69,12 +70,11 @@ def expand_keywords(): #This should be only called once, else it will crash as i
 expand_keywords()
 
 #This function calculates the threshold for matching keywords based on the number of keywords in a pattern. 
-def get_threshold(num_keywords):
-    if num_keywords <= 5: #This only counts as 1 match if there are 5 or fewer keywords in the pattern.
-        return num_keywords / 2
-    else:                  #This only counts as 1 match if there are more than 5 keywords in the pattern.
-        return num_keywords / 4
-
+def required_matches(num_keywords):
+    val = math.ceil(num_keywords * 0.4)
+    val = max(val, 2)        
+    val = min(val, num_keywords)
+    return val
 print("Enter the filename")
 while True:
     try:
@@ -88,7 +88,7 @@ while True:
 splited = re.split(r'(?<=[.!?])\s+', policy_text)
 
 windows = []
-findings = []
+findings = {}
 count = 0
 for i in range(0,len(splited) - 1):
     window = splited[i] + " " + splited[i+1]
@@ -108,8 +108,8 @@ for window in windows:
                     if form.lower() in lower_window:
                         matches += 1
                         break
-            threshold = get_threshold(len(pattern['keywords']))
-            if matches > threshold:
+            threshold = required_matches(len(pattern['keywords']))
+            if matches >= threshold:
                 if pattern['phrase'] not in tracker:
                     if debug: 
                         print(f"matches: {matches}, in {category} - {pattern['phrase']}")
@@ -120,27 +120,35 @@ for window in windows:
                         "source": pattern["source"],
                         "meaning": pattern["meaning"],
                         "danger": pattern["danger"],
+                        "matches":matches,
                     }
                     count += 1
-                    findings.append(values) 
+                    if category not in findings:
+                        findings[category] = values
+                    else:
+                        new_finding = (rank[values['danger']], values['matches'])
+                        old_finding = (rank[findings[category]['danger']], findings[category]['matches'])
+                        if new_finding > old_finding:
+                            findings[category] = values
+
 
 #The following loop iterates through the findings and prints out the details of each finding, including the danger level, source, category, and meaning. 
 # The danger level is displayed in uppercase for emphasis.
-for clause in findings:
+for clause in findings.values():
     print(f"[{clause['danger'].upper()}] {clause['source']} - {clause['category']} ")
     print(f"The meaning: {clause['meaning']}")
 #The scoring system assigns points based on the danger level of each finding. 
 #The total score is capped at a maximum of 10 points as a way to quantify the overall risk level of the privacy policy.
 score = 0
-for i in findings:
-    if i['danger'] == "high":
+for clause in findings.values():
+    if clause['danger'] == "high":
         score += 3
-    elif i['danger'] == "medium":
+    elif clause['danger'] == "medium":
         score += 2
-    elif i['danger'] == "low":
+    elif clause['danger'] == "low":
         score += 1
 score = min(score, 10)
-print(f"Total findings: {count}, Score: {score}/10")
+print(f"Total findings: {len(findings)}, Score: {score}/10")
 if debug:
     # pprint.pprint(patterns.database) this will print the entire database in a pretty format
     print(os.getcwd())

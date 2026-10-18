@@ -141,7 +141,7 @@ database = {
                                                              'of its staff',
                                                    'source': 'Fandom'},
                                                   {'danger': 'high',
-                                                   'keywords': ['restrict your access', 'suspend or terminate your account', 'for any reason or no reason', "cancel","revoke"],
+                                                   'keywords': ['restrict your access', 'suspend or terminate your account', 'for any reason or no reason'],
                                                    'meaning': 'Your account '
                                                               'can be deleted '
                                                               'or permanently '
@@ -163,7 +163,7 @@ database = {
                                                              'liability.',
                                                    'source': 'Reddit'},
                                                   {'danger': 'high',
-                                                   'keywords': ['disable your account', 'at any time', 'cancel your account',"without cause", "right to block"],
+                                                   'keywords': ['disable your',  "right to block", "right to disable"],
                                                    'meaning': 'Your account '
                                                               'can be deleted '
                                                               'or permanently '
@@ -210,7 +210,7 @@ database = {
                                                              'reason.',
                                                    'source': 'Namecheap'},
                                                   {'danger': 'high',
-                                                   'keywords': ['remove', 'disable access', "ban","restrict your access","cancel your account"],
+                                                   'keywords': ['disable access',"restrict your access", "at our discretion"],
                                                    'meaning': 'The service can '
                                                               'delete specific '
                                                               'content without '
@@ -938,7 +938,7 @@ database = {
                                                       'modifications.',
                                             'source': 'Ticketmaster'},
                                            {'danger': 'medium',
-                                            'keywords': ['by using the'],
+                                            'keywords': ['by using the','consent to the processing'],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -957,7 +957,7 @@ database = {
                                                       'Policy',
                                             'source': 'PhonePe'},
                                            {'danger': 'medium',
-                                            'keywords': ["submit to",'by using the', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
+                                            'keywords': ["submit to",'by using the platform', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -1070,7 +1070,7 @@ database = {
                                                                    'users.',
                                                          'source': 'Fandom'}]},
  'Mandatory Arbitration': {'phrases': [{'danger': 'high',
-                                        'keywords': ['neutral arbitrator', "class action waiver", "dispute resolution", "governing law", "settlement", "tribunal", "jurisdiction","arbitration", "binding"],
+                                        'keywords': ['neutral arbitrator', "class action waiver", "dispute resolution",  "tribunal", "arbitration"],
                                         'meaning': 'This service forces users '
                                                    'into binding arbitration '
                                                    'in the case of disputes',
