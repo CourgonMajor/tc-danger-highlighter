@@ -918,7 +918,7 @@ database = {
                                                         },
                                                          ]},
  'Implied Consent via Usage': {'phrases': [{'danger': 'medium',
-                                            'keywords': ['by using the service', 'constitutes your consent',  "by accessing", "continued use", "constitutes acceptance", "remains conditional upon", "by remaining a user"],
+                                            'keywords': ['by using the platform',  "continue to use the", "constitute your acceptance", "posting of the revised"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -938,7 +938,7 @@ database = {
                                                       'modifications.',
                                             'source': 'Ticketmaster'},
                                            {'danger': 'medium',
-                                            'keywords': ['by using the','consent to the processing'],
+                                            'keywords': ['by using the','consent to the processing', 'constitutes your consent',"by remaining a user",],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
@@ -957,7 +957,7 @@ database = {
                                                       'Policy',
                                             'source': 'PhonePe'},
                                            {'danger': 'medium',
-                                            'keywords': ["submit to",'by using the platform', "your entry onto", "by downloading", "by browsing", "upon installation", "your interaction with", "further engagement", "continued access"],
+                                            'keywords': ["by accessing","submit to",'by using the platform', "your entry onto",  "by browsing", "your interaction with", "further engagement", "continued access"],
                                             'meaning': 'Instead of asking '
                                                        'directly, this Service '
                                                        'will assume your '
